@@ -1,0 +1,13 @@
+.home{
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-areas:
+    '. . .'
+    'slider slider .'
+    'slider slider .'
+    '. . .';
+}
+
+app-slider{
+    grid-area: slider;
+}
