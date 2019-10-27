@@ -20,7 +20,7 @@ li,a,button {
     grid-template-areas: 
     'logo link link Nmode';
     grid-template-columns: 25% 25% 25% 25%;
-    height: 50px;
+    height: 75px;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -31,7 +31,6 @@ li,a,button {
     cursor: pointer;
     grid-area: logo;
     position: relative;
-    height: 50px;
     overflow: hidden;
     background: url(../../../pics/LOGO.png) no-repeat center;
     background-size: cover;
@@ -47,7 +46,7 @@ li,a,button {
 .link {
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 75px;
     padding: 20px;
     border-inline: 1px rgb(0, 136,169) solid;
     text-align: center;
@@ -78,4 +77,6 @@ button:hover{
     grid-area: Nmode;
     display: flex;
     justify-content: flex-end;
+    margin: auto;
+    margin-right: 0;
 }
