@@ -15,10 +15,11 @@ li,a,button {
     text-decoration: none;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header {
+    display: grid;
+    grid-template-areas: 
+    'logo link link Nmode';
+    grid-template-columns: 25% 25% 25% 25%;
     height: 50px;
     position: -webkit-sticky;
     position: sticky;
@@ -28,18 +29,18 @@ nav {
 
 .logo {
     cursor: pointer;
+    grid-area: logo;
     position: relative;
     height: 50px;
     overflow: hidden;
     background: url(../../../pics/LOGO.png) no-repeat center;
     background-size: cover;
-    width: 25%;
 }
 
 .links {
+    grid-area: link;
     display: flex;
     justify-content: center;
-    width: 50%;
     
 }
 
@@ -49,10 +50,11 @@ nav {
     height: 50px;
     padding: 20px;
     border-inline: 1px rgb(0, 136,169) solid;
+    text-align: center;
 }
 
 .link:hover{
-    background-color: rgb(11, 71, 99);
+    background-color: rgba(0, 136,169,0.8);
     color: #F0810F;
     transition: all 0.3s ease 0s;
 }
@@ -73,7 +75,7 @@ button:hover{
 }
 
 .Nmode {
+    grid-area: Nmode;
     display: flex;
     justify-content: flex-end;
-    width: 25%;
 }
