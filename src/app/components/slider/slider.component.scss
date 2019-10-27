@@ -1,20 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap');
+
+.slider-box{
+    background-color: #00293C;
+    padding: 0.5% 0 2% 0;
+    border-radius: 2%;
+}
+
 .slider{
     width: 100%;
     margin: auto;
-    overflow: hidden;
-    background-color: aqua;
+    overflow: hidden;  
+    background-color: #00293C;
 }
 
-.slider ul{
+.slider2{
+    width: 98%;
+    margin: auto;
+    overflow: hidden;  
+    background-color: #00293C;
+}
+
+.slider ul, .slider2 ul{
     display: flex;
     padding: 0;
     width: 1000%;
-    animation: cambio 30s infinite alternate;
+    animation: cambio 40s infinite alternate;
     animation-timing-function:ease-out;    
     margin: 0px;
 }
 
-.slider li{
+.slider li, .slider2 li{
     list-style: none;
     width: 100%;
 }
@@ -23,30 +38,33 @@
     height: 100%;
 }
 
+.info{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFB300;
+}
+
 @keyframes cambio {
     0% { margin-left: 0;}
     5% { margin-left: 0;}
-
     10% { margin-left: -100%;}
     15% { margin-left: -100%;}
-
-    30% { margin-left: -200%;}
-    40% { margin-left: -200%;} 
-
-    45% { margin-left: -300%;}
-    55% { margin-left: -300%;} 
-
-    60% { margin-left: -400%;}
-    70% { margin-left: -400%;}
-
-    75% { margin-left: -500%;}
-    85% { margin-left: -500%;}
-    90% { margin-left: -600%;}
-    55% { margin-left: -600%;}   
-    60% { margin-left: -700%;}
+    20% { margin-left: -200%;}
+    25% { margin-left: -200%;} 
+    30% { margin-left: -300%;}
+    35% { margin-left: -300%;} 
+    40% { margin-left: -400%;}
+    45% { margin-left: -400%;}
+    50% { margin-left: -500%;}
+    55% { margin-left: -500%;}
+    60% { margin-left: -600%;}
+    65% { margin-left: -600%;}   
+    70% { margin-left: -700%;}
     75% { margin-left: -700%;}   
     80% { margin-left: -800%;}
-    100% { margin-left: -800%;}
-    80% { margin-left: -900%;}
+    85% { margin-left: -800%;}
+    90% { margin-left: -900%;}
     100% { margin-left: -900%;}
 }
