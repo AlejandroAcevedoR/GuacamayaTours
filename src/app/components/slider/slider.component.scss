@@ -8,7 +8,7 @@
 .slider ul{
     display: flex;
     padding: 0;
-    width: 500%;
+    width: 1000%;
     animation: cambio 30s infinite alternate;
     animation-timing-function:ease-out;    
     margin: 0px;
@@ -25,14 +25,28 @@
 
 @keyframes cambio {
     0% { margin-left: 0;}
-    15% { margin-left: 0;}
-    20% { margin-left: -100%;}
-    35% { margin-left: -100%;}
-    40% { margin-left: -200%;}
-    55% { margin-left: -200%;}   
-    60% { margin-left: -300%;}
-    75% { margin-left: -300%;}   
-    80% { margin-left: -400%;}
-    100% { margin-left: -400%;}
+    5% { margin-left: 0;}
 
+    10% { margin-left: -100%;}
+    15% { margin-left: -100%;}
+
+    30% { margin-left: -200%;}
+    40% { margin-left: -200%;} 
+
+    45% { margin-left: -300%;}
+    55% { margin-left: -300%;} 
+
+    60% { margin-left: -400%;}
+    70% { margin-left: -400%;}
+
+    75% { margin-left: -500%;}
+    85% { margin-left: -500%;}
+    90% { margin-left: -600%;}
+    55% { margin-left: -600%;}   
+    60% { margin-left: -700%;}
+    75% { margin-left: -700%;}   
+    80% { margin-left: -800%;}
+    100% { margin-left: -800%;}
+    80% { margin-left: -900%;}
+    100% { margin-left: -900%;}
 }
