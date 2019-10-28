@@ -3,10 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { HotelesRoutingModule } from './hoteles-routing.module';
 import { HotelesComponent } from './hoteles.component';
+import { HotelComponent } from '../../components/hotel/hotel.component';
 
 
 @NgModule({
-  declarations: [HotelesComponent],
+  declarations: [
+    HotelesComponent,
+    HotelComponent
+  ],
   imports: [
     CommonModule,
     HotelesRoutingModule
