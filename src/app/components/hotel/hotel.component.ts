@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HOTELS } from '../../models/mock-hotels';
+import { Hotel } from '../../models/hotel';
+import { HotelService } from '../../services/hotel.service';
 
 
 @Component({
@@ -9,11 +10,30 @@ import { HOTELS } from '../../models/mock-hotels';
 })
 export class HotelComponent implements OnInit {
 
-  hotels = HOTELS;
+  hotels: Hotel[];
 
-  constructor() { }
+  constructor(private hotelService: HotelService) { }
+
+  getHotels(): void {
+    this.hotelService.getHotels().subscribe(hotels => this.hotels = hotels);
+  }
+
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.hotelService.addHotel({ name } as Hotel)
+      .subscribe(hero => {
+        this.hotels.push(hero);
+      });
+  }
+
+  delete(hotel: Hotel): void {
+    this.hotels = this.hotels.filter(h => h !== hotel);
+    this.hotelService.deleteHotel(hotel).subscribe();
+  }
 
   ngOnInit() {
+    this.getHotels();
   }
 
 }

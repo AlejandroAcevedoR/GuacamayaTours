@@ -1,13 +1,22 @@
-<h2>Hoteles</h2>
-<ul>
+<div>
+<ul class="hotels">
     <li *ngFor="let hotel of hotels">
-        <div><span>id: </span>{{hotel.id}}</div>
-        <div><span>nombre: </span>{{hotel.name}}</div>
-        <div><span>estrellas: </span>{{hotel.stars}}</div>
-        <div><span>direcion: </span>{{hotel.direction}}</div>
-        <div><span>servicios: </span>{{hotel.benefits}}</div>
-        <div><span>precio: </span>${{hotel.price}}</div>
-        <div><span>ciudad: </span>{{hotel.city}}</div>
-        <div><span>estado: </span>{{hotel.state}}</div>
+        <a class="info" routerLink="/main/Hoteles/detalle/{{hotel.id}}">
+            <div class="name"><span>nombre: </span>{{hotel.name}}</div>
+            <div class="stars"><span>estrellas: </span>{{hotel.stars}}</div>
+            <div class="price"><span>precio: </span>${{hotel.price}}</div>
+        </a>
+            <button class="delete" (click)="delete(hero)">X</button>
     </li>
 </ul>
+<div class="add">
+  <div class="divInput">
+    <label>Hotel:
+      <input #hotelName />
+    </label>
+  </div>
+    <button class="bAdd" (click)="add(hotelName.value); hotelName.value=''">
+      agregar
+    </button>
+</div>
+</div>

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap');
+
+.detail{
+    width: 90%;
+    margin: 10px auto 10px auto;
+    background-color: #00293C;
+    border-radius: 2em;
+    display: grid;
+    grid-template-areas:
+    'Hotel Hotel'
+    'back save';
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 50% 50%;
+    column-gap: 1%;
+    row-gap: 10%; 
+    padding: 0 2% 3% 2%
+}
+
+.back,.save{
+    background-color: #FFB300;
+    border-radius: 5em;
+    color: #00293C;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.Hotel{
+    width: 100%;
+    grid-area: Hotel;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFB300;
+}
+
+.Hotel input{
+    background: none;
+    border: none;
+    width: 80%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFB300;
+}
+
+.tittle{
+    text-align: center;
+}

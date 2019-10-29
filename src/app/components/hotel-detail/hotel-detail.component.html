@@ -1,0 +1,40 @@
+<div class="detail">
+<div class="Hotel" *ngIf="hotel">
+    <h2 class="tittle">{{hotel.name | uppercase}} Detalles</h2>
+    <div><span>id: </span>{{hotel.id}}</div>
+    <div>
+    <label>Nombre:
+        <input [(ngModel)]="hotel.name" placeholder="name"/>
+    </label>
+    </div>
+    <div>
+        <label>Estrellas:
+            <input [(ngModel)]="hotel.stars" placeholder="stars"/>
+        </label>
+    </div>
+    <div>
+        <label>Precio:
+            <input [(ngModel)]="hotel.price" placeholder="price"/>
+        </label>
+    </div>
+    <div>
+        <label>Direccion:
+            <input [(ngModel)]="hotel.direction" placeholder="direction"/>
+        </label>
+    </div>
+    <div><span>Beneficios: </span>{{hotel.benefits}}</div>
+    <div>
+        <label>Ciudad:
+            <input [(ngModel)]="hotel.city" placeholder="city"/>
+        </label>
+    </div>
+    <div>
+        <label>Estado:
+            <input [(ngModel)]="hotel.state" placeholder="state"/>
+        </label>
+    </div>
+</div>
+
+<button class="back" (click)="goBack()">Regresar</button>
+<button class="save" (click)="save()">Guardar</button>
+</div>
