@@ -4,4 +4,5 @@ export class Room {
     view: string;
     capacity: number;
     comodities: string[];
+    pictures: string[];
 }

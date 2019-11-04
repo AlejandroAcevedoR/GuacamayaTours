@@ -17,7 +17,8 @@ export class InMemoryDataService implements InMemoryDbService {
         benefits: [' deayuno incluido', ' pisina'],
         price: 9999,
         city: 'caracas',
-        state: 'distrito capital'
+        state: 'distrito capital',
+        picture: '../../assets/pics/htl1.jpg'
       },
     {
         id: 2,
@@ -27,7 +28,8 @@ export class InMemoryDataService implements InMemoryDbService {
         benefits: [' deayuno incluido', ' pisina'],
         price: 9999,
         city: 'caracas',
-        state: 'distrito capital'
+        state: 'distrito capital',
+        picture: '../../assets/pics/htl1.jpg'
       },
     {
         id: 3,
@@ -37,7 +39,8 @@ export class InMemoryDataService implements InMemoryDbService {
         benefits: [' deayuno incluido', ' pisina'],
         price: 9999,
         city: 'caracas',
-        state: 'distrito capital'
+        state: 'distrito capital',
+        picture: '../../assets/pics/htl1.jpg'
       },
     {
         id: 4,
@@ -47,7 +50,8 @@ export class InMemoryDataService implements InMemoryDbService {
         benefits: [' deayuno incluido', ' pisina'],
         price: 9999,
         city: 'caracas',
-        state: 'distrito capital'
+        state: 'distrito capital',
+        picture: '../../assets/pics/htl1.jpg'
       },
     {
         id: 5,
@@ -57,7 +61,8 @@ export class InMemoryDataService implements InMemoryDbService {
         benefits: [' deayuno incluido', ' pisina'],
         price: 9999,
         city: 'caracas',
-        state: 'distrito capital'
+        state: 'distrito capital',
+        picture: '../../assets/pics/htl1.jpg'
       },
     {
         id: 6,
@@ -67,7 +72,8 @@ export class InMemoryDataService implements InMemoryDbService {
         benefits: [' deayuno incluido', ' pisina'],
         price: 9999,
         city: 'caracas',
-        state: 'distrito capital'
+        state: 'distrito capital',
+        picture: '../../assets/pics/htl1.jpg'
       }
     ];
     return {hotels};

@@ -8,4 +8,5 @@ export class Hotel {
     price: number;
     city: string;
     state: string;
+    picture: string;
   }

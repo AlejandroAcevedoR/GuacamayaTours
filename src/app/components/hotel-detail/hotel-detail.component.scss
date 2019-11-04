@@ -7,16 +7,27 @@
     border-radius: 2em;
     display: grid;
     grid-template-areas:
-    'Hotel Hotel'
-    'back save';
+    'Hotel Hotel Hotel'
+    'back . save';
     grid-template-rows: 90% 10%;
-    grid-template-columns: 50% 50%;
-    column-gap: 1%;
-    row-gap: 10%; 
-    padding: 0 2% 3% 2%
+    grid-template-columns: 10% 80% 10%;
+    row-gap: 1%; 
+    padding: 1% 2% 2% 2%
 }
 
-.back,.save{
+
+.back{
+    grid-area: back;
+    background-color: #FFB300;
+    border-radius: 5em;
+    color: #00293C;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.save{
+    grid-area: save;
     background-color: #FFB300;
     border-radius: 5em;
     color: #00293C;
@@ -33,12 +44,18 @@
     font-size: 20px;
     color: #FFB300;
     margin-bottom: 20px;
+    display: grid;
+    grid-template-areas:
+    'tittle txt'
+    'pic txt';
+    grid-template-columns: 50% 50%; 
+    gap: 1em;
 }
 
 .Hotel input{
     background: none;
     border: none;
-    width: 80%;
+    width: 100%;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
     font-size: 20px;
@@ -46,6 +63,24 @@
 }
 
 .tittle{
+    grid-area: tittle;
     text-align: center;
     margin-top: 20px;
+}
+
+.pic{
+    grid-area: pic;
+}
+
+.pic img{
+    width: 100%;
+    border-radius: 1em;
+}
+
+.txt{
+    grid-area: txt;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1em 0 0 0;
 }
