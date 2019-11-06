@@ -7,6 +7,17 @@
             <div class="price"><span>Precio: </span>${{hotel.price}}</div>
             <div class="pic"><img src="{{hotel.picture}}" alt="hotel"></div>
         </a>
+            <button class="delete" (click)="delete(hero)">X</button>
     </li>
 </ul>
+<div class="add">
+  <div class="divInput">
+    <label>Hotel:
+      <input #hotelName />
+    </label>
+  </div>
+    <button class="bAdd" (click)="add(hotelName.value); hotelName.value=''">
+      agregar
+    </button>
+</div>
 </div>

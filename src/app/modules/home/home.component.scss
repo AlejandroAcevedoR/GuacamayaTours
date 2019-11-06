@@ -5,11 +5,15 @@
     '. . .'
     'slider slider .'
     'slider slider .'
-    '. . .';
+    'list list list';
     grid-gap: 10px;
     padding: 10px;
 }
 
 app-slider{
     grid-area: slider;
+}
+
+app-hotel-temp{
+    grid-area: list;
 }

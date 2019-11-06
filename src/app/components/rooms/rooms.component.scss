@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap');
+
+ul{
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 98%;
+    margin: auto;
+  }
+
+  .rms{
+    position: relative;
+    background-color: #00293C;
+    margin: .5em;
+    padding: 1% 1% 2% 2%;
+    height: 5%;
+    border-radius: 1.5em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    color: #FFB300;
+    display: grid;
+    grid-template-areas:
+    'slider name view cap'
+    'slider comodities comodities reservar'
+    'slider comodities2 comodities2 reservar';
+    grid-template-rows: 33% 34% 33%;
+    row-gap: 2%;
+    grid-template-columns: 25% 30% 25% 20%; 
+  }
+
+  .name{
+    grid-area: name;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .view{
+    grid-area: view;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cap{
+    grid-area: cap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .comodities{
+    grid-area: comodities;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .comodities2{
+    grid-area: comodities2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .reservar{
+    grid-area: reservar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button{
+    background-color: #FFB300;
+    color: #00293C;
+    border-radius: 10px;
+  }
+
+  .hotel{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    color: #FFB300;
+    display: flex;
+    justify-content: center;
+    background-color: #00293C;
+    position: sticky;
+    top: 75px;
+    z-index: 1;
+  }
+
+  .slider{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;  
+    background-color: #00293C;
+    grid-area: slider;
+}
+
+.slider ul{
+  display: flex;
+  padding: 0;
+  width: 500%;
+  animation: cambio 10s infinite alternate;
+  animation-timing-function:ease-out;    
+  margin: 0px;
+}
+.slider img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+@keyframes cambio {
+  0% { margin-left: 0;}
+  15% { margin-left: 0;}
+  20% { margin-left: -100%;}
+  35% { margin-left: -100%;}
+  40% { margin-left: -200%;}
+  55% { margin-left: -200%;} 
+  60% { margin-left: -300%;}
+  65% { margin-left: -300%;} 
+  80% { margin-left: -400%;}
+  100% { margin-left: -400%;}
+}

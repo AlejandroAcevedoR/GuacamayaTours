@@ -4,11 +4,11 @@ import { HotelService } from '../../services/hotel.service';
 
 
 @Component({
-  selector: 'app-hotel',
-  templateUrl: './hotel.component.html',
-  styleUrls: ['./hotel.component.scss']
+  selector: 'app-hotel-temp',
+  templateUrl: './hotel-temp.component.html',
+  styleUrls: ['./hotel-temp.component.scss']
 })
-export class HotelComponent implements OnInit {
+export class HotelTempComponent implements OnInit {
 
   hotels: Hotel[];
 

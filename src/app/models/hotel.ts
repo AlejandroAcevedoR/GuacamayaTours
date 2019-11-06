@@ -1,4 +1,4 @@
-
+import { Room } from './Room';
 export class Hotel {
     id: number;
     name: string;
@@ -9,4 +9,5 @@ export class Hotel {
     city: string;
     state: string;
     picture: string;
+    rooms: Room[];
   }

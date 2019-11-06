@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Hotel } from '../models/hotel';
+import { ROOMS } from '../models/mock-rooms';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,8 @@ export class InMemoryDataService implements InMemoryDbService {
         price: 9999,
         city: 'caracas',
         state: 'distrito capital',
-        picture: '../../assets/pics/htl1.jpg'
+        picture: '../../assets/pics/htl1.jpg',
+        rooms: ROOMS
       },
     {
         id: 2,
@@ -29,7 +31,8 @@ export class InMemoryDataService implements InMemoryDbService {
         price: 9999,
         city: 'caracas',
         state: 'distrito capital',
-        picture: '../../assets/pics/htl1.jpg'
+        picture: '../../assets/pics/htl1.jpg',
+        rooms: ROOMS
       },
     {
         id: 3,
@@ -40,7 +43,8 @@ export class InMemoryDataService implements InMemoryDbService {
         price: 9999,
         city: 'caracas',
         state: 'distrito capital',
-        picture: '../../assets/pics/htl1.jpg'
+        picture: '../../assets/pics/htl1.jpg',
+        rooms: ROOMS
       },
     {
         id: 4,
@@ -51,7 +55,8 @@ export class InMemoryDataService implements InMemoryDbService {
         price: 9999,
         city: 'caracas',
         state: 'distrito capital',
-        picture: '../../assets/pics/htl1.jpg'
+        picture: '../../assets/pics/htl1.jpg',
+        rooms: ROOMS
       },
     {
         id: 5,
@@ -62,7 +67,8 @@ export class InMemoryDataService implements InMemoryDbService {
         price: 9999,
         city: 'caracas',
         state: 'distrito capital',
-        picture: '../../assets/pics/htl1.jpg'
+        picture: '../../assets/pics/htl1.jpg',
+        rooms: ROOMS
       },
     {
         id: 6,
@@ -73,7 +79,8 @@ export class InMemoryDataService implements InMemoryDbService {
         price: 9999,
         city: 'caracas',
         state: 'distrito capital',
-        picture: '../../assets/pics/htl1.jpg'
+        picture: '../../assets/pics/htl1.jpg',
+        rooms: ROOMS
       }
     ];
     return {hotels};
