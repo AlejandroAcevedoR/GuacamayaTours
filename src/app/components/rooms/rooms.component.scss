@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap');
 
 ul{
-    margin: 0 0 2em 0;
+    margin: 0;
     list-style-type: none;
     padding: 0;
     width: 98%;
@@ -11,10 +11,10 @@ ul{
   .rms{
     position: relative;
     background-color: #00293C;
-    margin: .5em;
-    padding: 1% 1% 2% 2%;
-    height: 5%;
-    border-radius: 1.5em;
+    margin: .3em;
+    padding: 0;
+    height: 190px;
+    border-radius: 0 20px 0 20px ;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
     font-size: 2em;
@@ -25,7 +25,6 @@ ul{
     'slider comodities comodities reservar'
     'slider comodities2 comodities2 reservar';
     grid-template-rows: 33% 34% 33%;
-    row-gap: 2%;
     grid-template-columns: 25% 30% 25% 20%; 
   }
 
@@ -70,6 +69,7 @@ ul{
     justify-content: center;
     align-items: center;
   }
+
   button{
     background-color: #FFB300;
     color: #00293C;
@@ -91,9 +91,9 @@ ul{
 
   .slider{
     width: 100%;
+    height: 100%;
     margin: auto;
-    overflow: hidden;  
-    background-color: #00293C;
+    overflow: hidden; 
     grid-area: slider;
 }
 
@@ -103,12 +103,12 @@ ul{
   width: 500%;
   animation: cambio 10s infinite alternate;
   animation-timing-function:ease-out;    
-  margin: 0px;
+  margin: 0;
 }
 .slider img{
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 0 0 0 20px ;
 }
 
 @keyframes cambio {

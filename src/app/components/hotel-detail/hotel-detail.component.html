@@ -1,20 +1,19 @@
-<div class="detail">
+<div class="detail" *ngIf="hotel">
     
-    <div class="Hotel" *ngIf="hotel">
+    <div class="Hotel">
         <h2 class="tittle">{{hotel.name | uppercase}}</h2>
         <div class="pic"><img src="{{hotel.picture}}" alt="hotel"></div>
-        <div class="txt">
-            <div>Nombre: {{hotel.name}}</div>
-            <div>Estrellas: {{hotel.stars}}</div>
-            <div>Precio: {{hotel.price}}</div>
-            <div>Direccion: {{hotel.direction}}</div>
-            <div>Beneficios: {{hotel.benefits}}</div>
-            <div>Ciudad: {{hotel.city}}</div>
-            <div>Estado: {{hotel.state}}</div>
-            <a routerLink="/main/Hoteles/habitaciones">
-                <div>habitaciones</div>
-            </a>
-        </div>
     </div>
-    <button class="back" (click)="goBack()">Regresar</button>
+    <div class="txt">
+        <div>Nombre: {{hotel.name}}</div>
+        <div>Estrellas: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i></div>
+        <div>Precio: {{hotel.price}}</div>
+        <div>Direccion: {{hotel.direction}}</div>
+        <div>Beneficios: {{hotel.benefits}}</div>
+        <div>Ciudad: {{hotel.city}}</div>
+        <div>Estado: {{hotel.state}}</div>
+        <a routerLink="/main/Hoteles/habitaciones">
+            <div><i class="fas fa-bed"></i>habitaciones</div>
+        </a>
+    </div>
 </div>

@@ -6,12 +6,13 @@
     'slider slider .'
     'slider slider .'
     'list list list';
-    grid-gap: 10px;
-    padding: 10px;
+    row-gap: 10px;
+    margin: 0;
 }
 
 app-slider{
     grid-area: slider;
+    margin: 0 0 0 10px;
 }
 
 app-hotel-temp{

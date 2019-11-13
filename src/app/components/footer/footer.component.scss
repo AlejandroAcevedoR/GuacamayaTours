@@ -8,7 +8,7 @@
     padding: 1rem;
     font-family: 'Merriweather', serif;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 18px;
     color: #FFB300;
     text-decoration: none;
     background-color: #00293C;
@@ -19,41 +19,70 @@
     'about contact'
     'bottom bottom';
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
-  a{
-    font-family: 'Merriweather', serif;
-    font-weight: 300;
-    font-size: 15px;
-    color: black;
-    text-decoration: none;
+  a:hover{
+    background-color: rgb(0, 41, 78);
+    transition: all 0.5s ease 0s;
   }
 
  .about{
    grid-area: about;
-   height: 35px;
+   height: 100%;
    align-items: center;
    display: grid;
-   grid-template-rows: 15% 85%;
+   grid-template-rows: 20% 80%;
    grid-template-areas: 
    'tittle1'
-   '.'
    'text';
    padding: 5px;
  } 
 
+ .fab {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #FFB300;
+}
+
  .contact{
    grid-area: contact;
-   height: 35px;
+   height: 100%;
    display: grid;
    grid-template-columns: auto auto auto;
-   grid-template-rows: 15% 85%;
+   grid-template-rows: 20% 40% 40%;
    grid-template-areas: 
    'tittle tittle tittle'
-   '. . .'
-   'list1 list2 list3';
+   'g ttr f'
+   'w ig tmblr';
    padding: 5px;
+ }
+
+ .g{
+   grid-area: g;
+ }
+
+ .ttr{
+   grid-area: ttr;
+ }
+
+ .f{
+   grid-area: f;
+ }
+
+ .w{
+   grid-area: w;
+ }
+
+ .ig{
+   grid-area: ig;
+ }
+
+ .tmblr{
+   grid-area: tmblr;
  }
 
  .tittle{
@@ -62,27 +91,24 @@
 
  .tittle1{
   grid-area: tittle1;
-  padding-top: 10px;
 }
 
 .text{
   grid-area: text;
 }
 
- .list1{
-  grid-area: list1;
-}
-
-.list2{
-  grid-area: list2;
-}
-
-.list3{
-  grid-area: list3;
-}
-
  .bottom{
   grid-area: bottom;
   padding: 0 0 0px 0;
-  margin-top: 75px;
+  margin-top: 15px;
+  color: #FFB300;
+}
+
+.bottom a{
+  color: #FFB300;
+  text-decoration: none;
+}
+
+.bottom a:hover{
+  background-color: #00293C;
 }

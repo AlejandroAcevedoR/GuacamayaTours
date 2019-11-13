@@ -19,13 +19,13 @@ li,a,button {
     display: grid;
     grid-template-areas: 
     'logo link link Nmode';
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 25% 25% 30% 20%;
     height: 75px;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     padding: 0 2% 0 2%;
-    z-index: 1;
+    z-index: 100;
 }
 
 .logo {
@@ -80,4 +80,17 @@ button:hover{
     justify-content: flex-end;
     margin: auto;
     margin-right: 0;
+}
+
+.far{
+    background: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    width: 50px;
+}
+
+.fas{
+    padding-right: 3px;
+    background: none;
 }
