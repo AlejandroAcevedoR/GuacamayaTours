@@ -1,0 +1,20 @@
+.home{
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-areas:
+    '. . .'
+    'slider slider .'
+    'slider slider .'
+    'list list list';
+    row-gap: 10px;
+    margin: 0;
+}
+
+app-slider{
+    grid-area: slider;
+    margin: 0 0 0 10px;
+}
+
+app-hotel-temp{
+    grid-area: list;
+}

@@ -1,0 +1,111 @@
+//Vamos a acomodar cómo se ve el cuadro de las ofertas.
+.Ofertas{
+
+background-color: rgb(7, 50, 90);
+padding: 20px 0 20px 0;
+border-radius: 20px;
+display: grid;
+grid-template-areas:
+'slider';
+
+}
+
+.blanco{
+
+    background-color: rgb(255, 255, 255);
+    padding: 20px 0 20px 0;
+   
+  
+    
+    }
+
+   .botonAmarillo{
+
+    grid-area: botonAmarillo;
+    background-color: #FFB300;
+    color: rgb(0, 0, 0);
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   }
+
+
+.hotels {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    width: 99%;
+    margin: auto;
+
+  }
+
+  .info {
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    font-weight: 600;
+    font-size: 15px;
+    color: #FFB300;
+    display: grid;
+    grid-template-areas:
+    'pic name name'
+    'pic price botonAmarillo';
+    grid-template-rows: 50% 50%; 
+    grid-template-columns: 25% auto auto; 
+  }
+  
+  .stars {
+    grid-area: stars;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .name{
+    grid-area: name;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .price{
+    grid-area: price;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pic{
+    grid-area: pic;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pic img{
+    width: 80px;
+    height: 65px;
+    border-radius: 0 0 0 20px ;
+  }
+
+  .hotels li {
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(7, 50, 90);
+    margin: .3em;
+    padding: 0;
+    height: 75px;
+    border-radius: 0 20px 0 20px ;
+  }
+
+  .hotels li:hover {
+    background-color: rgba(0, 136,169,0.8);
+    transition: all 0.3s ease 0s;
+  }
+
+  
+
+  
+
+//Hasta aquí llega el código de creación de ofertas.
