@@ -1,4 +1,35 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap');
+//Vamos a acomodar cómo se ve el cuadro de las ofertas.
+.Ofertas{
+
+background-color: rgb(7, 50, 90);
+padding: 20px 0 20px 0;
+border-radius: 20px;
+display: grid;
+grid-template-areas:
+'slider';
+
+}
+
+.blanco{
+
+    background-color: rgb(255, 255, 255);
+    padding: 20px 0 20px 0;
+   
+  
+    
+    }
+
+   .botonAmarillo{
+
+    grid-area: botonAmarillo;
+    background-color: #FFB300;
+    color: rgb(0, 0, 0);
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   }
 
 
 .hotels {
@@ -7,6 +38,7 @@
     padding: 0;
     width: 99%;
     margin: auto;
+
   }
 
   .info {
@@ -14,12 +46,12 @@
     font-family: 'Josefin Sans', sans-serif;
     padding: 0;
     font-weight: 600;
-    font-size: 2em;
+    font-size: 15px;
     color: #FFB300;
     display: grid;
     grid-template-areas:
     'pic name name'
-    'pic stars price';
+    'pic price botonAmarillo';
     grid-template-rows: 50% 50%; 
     grid-template-columns: 25% auto auto; 
   }
@@ -52,8 +84,8 @@
   }
 
   .pic img{
-    width: 285px;
-    height: 250px;
+    width: 80px;
+    height: 65px;
     border-radius: 0 0 0 20px ;
   }
 
@@ -63,7 +95,7 @@
     background-color: rgb(7, 50, 90);
     margin: .3em;
     padding: 0;
-    height: 250px;
+    height: 75px;
     border-radius: 0 20px 0 20px ;
   }
 
@@ -71,3 +103,9 @@
     background-color: rgba(0, 136,169,0.8);
     transition: all 0.3s ease 0s;
   }
+
+  
+
+  
+
+//Hasta aquí llega el código de creación de ofertas.

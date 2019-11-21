@@ -1,0 +1,30 @@
+
+
+<div class = "Ofertas">
+
+       
+<div class = "blanco">
+
+    <div>    
+    
+    <i class="fas fa-search"></i>    
+    
+    <div class="md-form mt-0">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+              </div>
+            </div>
+    <ul class="hotels">
+        <li *ngFor="let hotel of hotels">
+            <a class="info" routerLink="/main/Hoteles/detalle/{{hotel.id}}">
+                <div class="name">{{hotel.name | titlecase}}</div>
+                <div class="price"><span>Precio: </span>${{hotel.price}}</div>
+                <div class="pic"><img src="{{hotel.picture}}" alt="hotel"></div>
+                <div class="botonAmarillo">Ver Oferta</div>
+            </a>
+        </li>
+    </ul>
+
+</div>
+
+</div>
+
