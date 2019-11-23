@@ -12,6 +12,11 @@
     border-width: 2px;
 }
 
+a{
+    text-decoration: none;
+    color: #FFB300;
+}
+
 ::ng-deep .card-header:hover{
     background-color: rgb(0, 136, 139);
 }

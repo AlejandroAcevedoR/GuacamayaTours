@@ -4,7 +4,7 @@
         <a class="info" routerLink="/main/Hoteles/detalle/{{hotel.id}}">
             <div class="name">{{hotel.name | titlecase}}</div>
             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i></div>
-            <div class="price"><span>Precio: </span>${{hotel.price}}</div>
+            <div class="price"><span>A partir de: </span>${{hotel.price}}</div>
             <div class="pic"><img src="{{hotel.picture}}" alt="hotel"></div>
         </a>
     </li>
