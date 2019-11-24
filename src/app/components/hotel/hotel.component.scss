@@ -51,7 +51,7 @@
   }
 
   .pic img{
-    width: auto;
+    width: 300px;
     height: 150px;
     border-radius: 0 0 0 20px ;
   }
@@ -69,4 +69,31 @@
   .hotels li:hover {
     background-color: rgba(0, 136,169,0.8);
     transition: all 0.3s ease 0s;
+  }
+
+  .search{
+    display: grid;
+    grid-template-areas:
+    ' fas form';
+    grid-template-columns: 5% 95%;
+    background-color: rgb(7, 50, 90);  
+    width: 97%;
+    margin: 10px auto 10px auto;
+    padding: 0 10px 0 5px;
+    gap: 0px;
+    border-radius: 5px;
+  }
+  
+  .fa-search{
+    grid-area: fas;
+    padding: 9px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFB300;
+  }
+  
+  .md-form{
+    grid-area: form;
   }

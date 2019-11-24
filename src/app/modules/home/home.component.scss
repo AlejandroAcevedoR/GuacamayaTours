@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: 33% 34% 33%;
     grid-template-areas:
-    'slider slider slider'
-    'slider slider slider'
+    'slider slider of'
+    'slider slider of'
     'list list list';
     row-gap: 10px;
     margin: 0;
@@ -11,9 +11,12 @@
 
 app-slider{
     grid-area: slider;
-    margin: 0px;
 }
 
 app-hotel-temp{
     grid-area: list;
+}
+
+app-ver-ofertas{
+    grid-area: of;
 }

@@ -15,11 +15,16 @@ export class HotelService {
   };
 
   private hotelsUrl = 'api/hotels';
+  private hotelOfertasUrl1 = 'api/hotelOfertas';
 
   constructor(private http: HttpClient) { }
 
   getHotels(): Observable<Hotel[]> {
     return this.http.get<Hotel[]>(this.hotelsUrl);
+  }
+
+  getHotelOfertas(): Observable<Hotel[]> {
+    return this.http.get<Hotel[]>(this.hotelOfertasUrl1);
   }
 
   getHotel(id: number): Observable<Hotel> {

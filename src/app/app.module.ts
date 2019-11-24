@@ -26,9 +26,11 @@ const config = {
     measurementId: 'G-measurement-id',
 };
 
+
+
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
