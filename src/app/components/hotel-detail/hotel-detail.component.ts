@@ -12,6 +12,7 @@ import { Location } from '@angular/common';
 export class HotelDetailComponent implements OnInit {
 
   @Input() hotel: Hotel;
+  stars = [1, 2, 3, 4, 5];
 
   constructor(
     private route: ActivatedRoute,

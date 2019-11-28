@@ -79,3 +79,8 @@ a{
 a:hover{
     background-color: rgba(0, 136,169,0.7);
 }
+
+.stars{
+    display: flex;
+    flex-direction: row;
+}

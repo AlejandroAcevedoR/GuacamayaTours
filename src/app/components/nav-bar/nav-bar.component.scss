@@ -19,29 +19,37 @@ li,a,button {
     display: grid;
     grid-template-areas: 
     'logo link link Nmode';
-    grid-template-columns: 25% 25% 30% 20%;
+    grid-template-columns: 29% auto auto auto;
     height: 75px;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    padding: 0 2% 0 2%;
+    padding: 0 2% 0 5px;
     z-index: 100;
 }
 
 .logo {
     cursor: pointer;
     grid-area: logo;
-    position: relative;
     overflow: hidden;
-    background: url(../../../assets/pics/LOGO.png) no-repeat center;
-    background-size: cover;
+    height: 75px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo img{
+    height: 75px;
+    width: 275px;
+}
+
+.iso{
+    display: none;
 }
 
 .links {
     grid-area: link;
     display: flex;
     justify-content: center;
-    
 }
 
 .link {
@@ -78,11 +86,10 @@ button:hover{
     grid-area: Nmode;
     display: flex;
     justify-content: flex-end;
-    margin: auto;
-    margin-right: 0;
+    margin: auto 0 auto 5%;
 }
 
-.far{
+.far, .fa-bars{
     background: none;
     text-align: center;
     text-decoration: none;
@@ -93,4 +100,90 @@ button:hover{
 .fas{
     padding-right: 3px;
     background: none;
+}
+
+.menubtn{
+    display: none;
+    grid-area: menubtn;
+}
+
+@media (max-width: 1000px){
+    .iso{
+        display: block;
+    }
+    .logo{
+        justify-content: center;
+    }
+    .logo img{
+        height: 100px;
+        width: 69px;
+    }
+    .log{
+        display: none;
+    }
+    .header{
+        grid-template-columns: auto 40% 35% auto;
+    }
+}
+@media (max-width: 760px){
+    .links[aria-expanded="true"]{
+        display: grid;
+        max-height: 75px;
+        transform: rotateX(0);
+        grid-template-areas:
+        'hot des pla iti';
+    }
+    .hot{
+        grid-area: hot;
+    }
+    .des{
+        grid-area: des;
+    }
+    .pla{
+        grid-area: pla;
+    }
+    .iti{
+        grid-area: iti;
+    }
+    .header[aria-expanded="true"]{
+        height: 150px;
+        grid-template-rows: 50% 50%;
+    }
+    .links{
+        transform: rotateX(90deg);
+        max-height: 0;
+        transition: all 0.5s;
+    }
+    .menubtn{
+        display: flex;
+        justify-content: flex-start;
+        margin: auto 0 auto 5%;
+    }
+    .Nmode{
+        margin: auto 5% auto 0;
+    }
+    .header{      
+        padding: 0;
+        grid-template-areas: 
+        'menubtn logo Nmode'
+        'link link link';
+        grid-template-columns: 33% 34% 33%;
+        transition: all 0.5s;
+        grid-template-rows: 100% 0;
+    }
+    @media (max-width: 510px){
+        .links[aria-expanded="true"]{
+            display: grid;
+            max-height: 75px;
+            transform: rotateX(0);
+            grid-template-areas:
+            'hot des'
+            'pla iti';
+        }
+        .header[aria-expanded="true"]{
+            height: 225px;
+            grid-template-rows: 33% 66%;
+        }
+
+    }
 }

@@ -6,7 +6,15 @@
     </div>
     <div class="txt">
         <div>Nombre: {{hotel.name}}</div>
-        <div>Estrellas: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i></div>
+        <div class="stars">Estrellas:
+            <div *ngFor="let star of stars; let i = index">
+                <span *ngIf="i < hotel.stars">
+                    <i class="fas fa-star"></i>
+                </span>
+                    <span *ngIf="i >= hotel.stars"><i class="far fa-star"></i>
+                </span>
+            </div>
+        </div>
         <div>Precio: {{hotel.price}}</div>
         <div>Direccion: {{hotel.direction}}</div>
         <div>Beneficios: {{hotel.benefits}}</div>

@@ -7,6 +7,7 @@ import { HotelesComponent } from './hoteles.component';
 import { HotelComponent } from '../../components/hotel/hotel.component';
 import { RoomsComponent } from '../../components/rooms/rooms.component';
 import { HotelDetailComponent } from '../../components/hotel-detail/hotel-detail.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HotelDetailComponent } from '../../components/hotel-detail/hotel-detail
   imports: [
     CommonModule,
     HotelesRoutingModule,
-    FormsModule
+    FormsModule,
+    ScrollingModule
   ]
 })
 export class HotelesModule { }

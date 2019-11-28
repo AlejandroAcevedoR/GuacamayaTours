@@ -20,6 +20,14 @@
     'bottom bottom';
     padding: 10px;
     margin-top: 10px;
+    gap: 15px;
+  }
+
+  .contact a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
   }
 
   a:hover{
@@ -30,12 +38,12 @@
  .about{
    grid-area: about;
    height: 100%;
-   align-items: center;
+   width: 100%;
    display: grid;
    grid-template-rows: 20% 80%;
    grid-template-areas: 
    'tittle1'
-   'text';
+   'txt';
    padding: 5px;
  } 
 
@@ -51,6 +59,7 @@
  .contact{
    grid-area: contact;
    height: 100%;
+   width: 100%;
    display: grid;
    grid-template-columns: auto auto auto;
    grid-template-rows: 20% 40% 40%;
@@ -94,7 +103,8 @@
 }
 
 .text{
-  grid-area: text;
+  grid-area: txt;
+
 }
 
  .bottom{
@@ -111,4 +121,17 @@
 
 .bottom a:hover{
   background-color: #00293C;
+}
+
+@media (max-width:500px){
+  .footer{
+    grid-template-areas: 
+    'about'
+    'contact'
+    'bottom';
+    grid-template-columns: auto;
+  }
+  .about{
+    grid-template-rows: auto;
+  }
 }

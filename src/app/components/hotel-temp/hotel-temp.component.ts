@@ -11,6 +11,7 @@ import { HotelService } from '../../services/hotel.service';
 export class HotelTempComponent implements OnInit {
 
   hotels: Hotel[];
+  stars = [1, 2, 3, 4, 5];
 
   constructor(private hotelService: HotelService) { }
 

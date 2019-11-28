@@ -3,14 +3,23 @@
         <div class="search">    
                 <i class="fas fa-search"></i>    
                 <div class="md-form mt-0">
-                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                    <input [(ngModel)]="listFilter" class="form-control" type="text" placeholder="Search" aria-label="Search">
                 </div>
             </div>
 <ul class="hotels">
-    <li *ngFor="let hotel of hotels">
+    
+    <li *ngFor="let hotel of filteredHotels">
         <a class="info" routerLink="/main/Hoteles/detalle/{{hotel.id}}">
             <div class="name">{{hotel.name | titlecase}}</div>
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i></div>
+            <div class="stars">
+                <div *ngFor="let star of stars; let i = index">
+                    <span *ngIf="i < hotel.stars">
+                        <i class="fas fa-star"></i>
+                    </span>
+                        <span *ngIf="i >= hotel.stars"><i class="far fa-star"></i>
+                    </span>
+                </div>
+            </div>
             <div class="price"><span>A partir de: </span>${{hotel.price}}</div>
             <div class="pic"><img src="{{hotel.picture}}" alt="hotel"></div>
         </a>
