@@ -20,3 +20,13 @@ app-hotel-temp{
 app-ver-ofertas{
     grid-area: of;
 }
+
+@media(max-width:1000px){
+    .home{
+        grid-template-columns: 100%;
+        grid-template-areas:
+        'slider'
+        'of'
+        'list'; 
+    }
+}

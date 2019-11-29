@@ -70,3 +70,42 @@
     background-color: rgba(0, 136,169,0.8);
     transition: all 0.3s ease 0s;
   }
+
+  @media (max-width:950px){
+    .pic img{
+      width: 200px;
+    }
+  }
+  @media (max-width:700px){
+    .info{
+    grid-template-columns: 25% 40% 35%; 
+    }
+    .stars {
+      justify-content: flex-end;
+    }
+  }
+  @media (max-width:600px){
+    .price span{
+      display: none;
+    }
+    .info{
+      grid-template-columns: 35% 40% 25%; 
+    }
+    .pic img{
+      width: 100%;
+    }
+  }
+  @media(max-width: 460px){
+    .info{
+    grid-template-areas:
+    'pic name'
+    'pic stars' 
+    'pic price';
+    grid-template-rows: 33% 34% 33%; 
+    grid-template-columns: 40% 60%; 
+    font-size: 1.5em;
+    }
+    .stars {
+      justify-content: center;
+    }
+  }

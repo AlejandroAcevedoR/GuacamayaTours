@@ -92,7 +92,16 @@ margin: 15px;
     transition: all 0.3s ease 0s;
   }
 
-  
+  @media(max-width:360px){
+    .info{
+    grid-template-areas:
+    'pic name price'
+    'pic  botonAmarillo botonAmarillo';
+    grid-template-rows: 50% 50%; 
+    grid-template-columns: auto auto auto; 
+    font-size: 15px;
+    }
+  }
 
   
 

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { FilterPipe } from '../../pipes/filter.pipe';
 
 import { HotelesRoutingModule } from './hoteles-routing.module';
 import { HotelesComponent } from './hoteles.component';
@@ -14,7 +15,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     HotelesComponent,
     HotelComponent,
     RoomsComponent,
-    HotelDetailComponent
+    HotelDetailComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,

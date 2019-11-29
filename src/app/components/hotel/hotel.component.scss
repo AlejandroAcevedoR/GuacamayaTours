@@ -70,17 +70,17 @@
     background-color: rgba(0, 136,169,0.8);
     transition: all 0.3s ease 0s;
   }
+  
 
   .search{
     display: grid;
     grid-template-areas:
-    ' fas form';
-    grid-template-columns: 10% auto;
+    ' fas form1 dstars dstate form2';
+    grid-template-columns: 5% 45% 5% 5% 40%;
     background-color: rgb(7, 50, 90);  
     width: 97%;
     margin: 10px auto 10px auto;
     padding: 0 10px 0 5px;
-    gap: 10px;
     border-radius: 5px;
   }
   
@@ -94,49 +94,121 @@
     color: #FFB300;
   }
   
-  .md-form{
-    grid-area: form;
+  .frm1{
+    grid-area: form1;
+    margin: 0 1% 0 0;
+  }
+  .frm2{
+    grid-area: form2;
+    margin: 0 0 0 1%;
   }
 
-  // .dropbtn {
-  //   background-color: #FFB300;
-  //   color: rgb(7, 50, 90);
-  //   font-size: 20px;
-  //   width: 40px;
-  //   height: 40px;
-  //   border: none;
-  //   border-radius: 5px;
-  //   cursor: pointer;
-  // }
+  .dropbtn {
+    background-color: #FFB300;
+    color: rgb(7, 50, 90);
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
   
-  // .dropdown {
-  //   grid-area: dstars;
-  //   position: relative;
-  //   display: inline-block;
-  // }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dstars{
+    grid-area: dstars;
+  }
+
+  .dstate{
+    grid-area: dstate;
+  }
   
-  // .dropdown-content {
-  //   display: none;
-  //   position: absolute;
-  //   background-color: #f9f9f9;
-  //   min-width: 160px;
-  //   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  //   z-index: 1;
-  // }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
   
-  // .dropdown-content a {
-  //   color: rgb(7, 50, 90);
-  //   padding: 12px 16px;
-  //   text-decoration: none;
-  //   display: block;
-  // }
+  .dropdown-content a {
+    color: rgb(7, 50, 90);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
   
-  // .dropdown-content a:hover {background-color: #b5e5f3}
+  .dropdown-content a:hover {background-color: #b5e5f3}
   
-  // .dropdown:hover .dropdown-content {
-  //   display: block;
-  // }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
   
-  // .dropdown:hover .dropbtn {
-  //   background-color:  rgb(240, 156, 0);
-  // }
+  .dropdown:hover .dropbtn {
+    background-color:  rgb(240, 156, 0);
+  }
+
+  #sf{
+    display: none;
+  }
+
+  @media (max-width:950px){
+    .pic img{
+      width: 200px;
+    }
+  }
+  @media (max-width:800px){
+    .search{
+      grid-template-columns: 6% 40% 7% 7% 40%;
+    }
+  }
+  @media (max-width:700px){
+    .info{
+    grid-template-columns: 25% 40% 35%; 
+    }
+    .stars {
+      justify-content: flex-end;
+    }
+  }
+  @media (max-width:600px){
+    .price span{
+      display: none;
+    }
+    .info{
+      grid-template-columns: 35% 40% 25%; 
+    }
+    .search{
+      grid-template-areas: 
+    ' fas dstars form1'
+    ' fas dstate form2';
+      grid-template-columns: 10% 10% 80%;
+    }
+    .frm1{
+      margin: 0 0 0 2%;
+    }
+    .frm2{
+      margin: 0 0 0 2%;
+    }
+    .pic img{
+      width: 100%;
+    }
+  }
+  @media(max-width: 460px){
+    .info{
+    grid-template-areas:
+    'pic name'
+    'pic stars' 
+    'pic price';
+    grid-template-rows: 33% 34% 33%; 
+    grid-template-columns: 40% 60%; 
+    font-size: 1.5em;
+    }
+    .stars {
+      justify-content: center;
+    }
+  }

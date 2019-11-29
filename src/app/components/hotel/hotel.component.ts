@@ -11,40 +11,33 @@ import { HotelService } from '../../services/hotel.service';
 export class HotelComponent implements OnInit {
 
   hotels: Hotel[];
-  filteredHotels: Hotel[] = [];
-  _listFilter = '';
+  _starFilter = '';
+  _stateFilter = '';
   stars = [1, 2, 3, 4, 5];
+  listFilter = '';
+  priceFilter = '';
 
- // sstars(value: number) {
-   // if (value === 0) {
-     // this._listFilter = '';
-   // } else {
-     // this._listFilter = value.toString();
-   // }
- // }
-
-  get listFilter(): string {
-    return this._listFilter;
-  }
-  set listFilter(value: string) {
-    this._listFilter = value;
-    this.filteredHotels = this.listFilter ? this.doFilter(this.listFilter) : this.hotels;  
+  sstate(value: string) {
+    this._stateFilter = value;
   }
 
-  doFilter(filterBy: string): Hotel[] {
-    filterBy = filterBy.toLocaleLowerCase();
-    return this.hotels.filter((hotel: Hotel) =>
-        hotel.name.toLocaleLowerCase().indexOf(filterBy) !== -1 
-        || hotel.state.toLocaleLowerCase().indexOf(filterBy) !== -1
-        || hotel.stars.toString().indexOf(filterBy) !== -1
-        || hotel.price.toString().indexOf(filterBy) !== -1
-        || hotel.city.toLocaleLowerCase().indexOf(filterBy) !== -1
-        );
+  get stateFilter(): string {
+    return this._stateFilter;
   }
 
+  sstars(value: number) {
+    if (value === 6) {
+      this._starFilter = '';
+    } else {
+      this._starFilter = value.toString();
+    }
+  }
+
+  get starFilter(): string {
+    return this._starFilter;
+  }
+  
   constructor(private hotelService: HotelService) {
-    this.filteredHotels = this.hotels;
-    this.listFilter = '';
   }
 
   getHotels(): void {

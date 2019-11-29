@@ -84,3 +84,12 @@ a:hover{
     display: flex;
     flex-direction: row;
 }
+
+@media(max-width:1000px){
+    .detail{
+        grid-template-areas:
+        'Hotel'
+        ' txt';
+        grid-template-columns: 100%;
+    }
+}
