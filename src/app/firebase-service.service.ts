@@ -1,64 +1,40 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirebaseServiceService {
 
-  constructor(public db: AngularFirestore) {}
+  constructor( private firestore: AngularFirestore ) { }
 
-  nuevoHotel(value) {
-    return this.db.collection('hoteles').add({
-      nombre: value.nombre.toLowerCase(),
-      destino: value.destino.toLowerCase(),
-      estado: value.estado.toLowerCase(),
-      categoria: value.categoria.toLowerCase(),
-      estrellas: parseInt(value.estrellas),
-      incluidoHotel: value.incluidoHotel,
-      imagenhotel: value.imagenHotel,
+  form = new FormGroup({
+    bepis: new FormControl('sfdgsdf'),
+  });
+
+  writeArchive(data) {
+    return new Promise<any>((resolve, reject) => {
+        this.firestore
+            .collection('archive')
+            .add(data)
+            .then(res => {}, err => reject(err));
     });
   }
 
-  getAvatars() {
-      return this.db.collection('/avatar').valueChanges();
+  readArchive() {
+    return this.firestore.collection('archive').snapshotChanges();
   }
 
-  getUser(userKey) {
-    return this.db.collection('users').doc(userKey).snapshotChanges();
+  updateCoffeeOrder(data) {
+    return this.firestore.collection('archive').doc(data.payload.doc.id).set({ bepis: 'asdfasdf' }, { merge: true });
   }
 
-  updateUser(userKey, value) {
-    value.nameToSearch = value.name.toLowerCase();
-    return this.db.collection('users').doc(userKey).set(value);
+  updateBepis(data) {
+    return this.firestore.collection('archive').doc(data.payload.doc.id).set({ bepis: 'a' }, { merge: true });
   }
 
-  deleteUser(userKey) {
-    return this.db.collection('users').doc(userKey).delete();
-  }
-
-  getUsers() {
-    return this.db.collection('users').snapshotChanges();
-  }
-
-  searchUsers(searchValue) {
-    return this.db.collection('users', ref => ref.where('nameToSearch', '>=', searchValue)
-      .where('nameToSearch', '<=', searchValue + '\uf8ff'))
-      .snapshotChanges();
-  }
-
-  searchUsersByAge(value) {
-    return this.db.collection('users', ref => ref.orderBy('age').startAt(value)).snapshotChanges();
-  }
-
-
-  createUser(value, avatar) {
-    return this.db.collection('users').add({
-      name: value.name,
-      nameToSearch: value.name.toLowerCase(),
-      surname: value.surname,
-      age: parseInt(value.age),
-      avatar: avatar
-    });
-  }
+  deleteCoffeeOrder(data) {
+    return this.firestore.collection('archive').doc(data.payload.doc.id).delete();
+ }
 }

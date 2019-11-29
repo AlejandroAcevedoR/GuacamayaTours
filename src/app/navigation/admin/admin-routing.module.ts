@@ -7,13 +7,7 @@ import { HotelAdminComponent } from '../../components/hotel-admin/hotel-admin.co
 import { HotelDetailAdminComponent } from '../../components/hotel-detail-admin/hotel-detail-admin.component';
 
 const routes: Routes = [
-  { path: '', component: AdminComponent,
-  children: [
-    { path: 'Admin', component: AdminHomeComponent },
-    { path: '', redirectTo: 'Admin', pathMatch: 'all' },
-    { path: 'detail/:id', component: HotelDetailAdminComponent }
-  ]
-  }];
+  { path: '', component: AdminHomeComponent, pathMatch: 'full'  }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

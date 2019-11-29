@@ -40,8 +40,4 @@ export class AdminHomeComponent implements OnInit {
     });
   }
 
-  onSubmit(value){
-    this.firebaseService.nuevoHotel(value)
-  }
-
 }

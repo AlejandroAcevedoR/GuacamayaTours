@@ -9,7 +9,6 @@ import { HotelAdminComponent } from '../../components/hotel-admin/hotel-admin.co
 import { HotelDetailAdminComponent } from 'src/app/components/hotel-detail-admin/hotel-detail-admin.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatInputModule,
     MatFormFieldModule,
     MatDialogModule,
-    BrowserAnimationsModule,
   ]
 })
 export class AdminModule { }

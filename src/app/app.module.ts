@@ -15,6 +15,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+import { FirebaseServiceService } from './firebase-service.service';
+import { environment } from '../environments/environment';
+export const firebaseConfig = environment.firebaseConfig;
+
+
 const config = {
     apiKey: 'AIzaSyCKV3jMIRicvewNup0f4dMk7uiJZK84x2Q',
     authDomain: 'guacamaya-tours-7adf9.firebaseapp.com',
