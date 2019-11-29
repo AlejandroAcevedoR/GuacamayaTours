@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap');
+
+.detail{
+    width: 90%;
+    margin: 10px auto 10px auto;
+    background-color: #00293C;
+    border-radius: 2em;
+    display: grid;
+    grid-template-areas:
+    'Hotel Hotel Hotel'
+    'back . save';
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 10% 80% 10%;
+    row-gap: 1%; 
+    padding: 1% 2% 2% 2%
+}
+
+
+.back{
+    grid-area: back;
+    background-color: #FFB300;
+    border-radius: 5em;
+    color: #00293C;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.save{
+    grid-area: save;
+    background-color: #FFB300;
+    border-radius: 5em;
+    color: #00293C;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.Hotel{
+    width: 100%;
+    grid-area: Hotel;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFB300;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-areas:
+    'tittle txt'
+    'pic txt';
+    grid-template-columns: 50% 50%; 
+    gap: 1em;
+}
+
+.Hotel input{
+    background: none;
+    border: none;
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFB300;
+}
+
+.tittle{
+    grid-area: tittle;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pic{
+    grid-area: pic;
+}
+
+.pic img{
+    width: 100%;
+    border-radius: 1em;
+}
+
+.txt{
+    grid-area: txt;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1em 0 0 0;
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFB300;
+    background-color: rgb(0, 136,169);
+    border-radius: 5px;
+}
+
+a:hover{
+    background-color: rgba(0, 136,169,0.7);
+}

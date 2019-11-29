@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #00293C;
+}
+
+li,a,button {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFB300;
+    text-decoration: none;
+}
+
+.header {
+    display: grid;
+    grid-template-areas: 
+    'logo link link Nmode';
+    grid-template-columns: 29% auto auto auto;
+    height: 75px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 0 2% 0 5px;
+    z-index: 100;
+}
+
+.logo {
+    cursor: pointer;
+    grid-area: logo;
+    overflow: hidden;
+    height: 75px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo img{
+    height: 75px;
+    width: 275px;
+}
+
+.iso{
+    display: none;
+}
+
+.links {
+    grid-area: link;
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    height: 75px;
+    padding: 20px;
+    border-inline: 1px rgb(0, 136,169) solid;
+    text-align: center;
+}
+
+.link:hover{
+    background-color: rgba(0, 136,169,0.8);
+    color: #F0810F;
+    transition: all 0.3s ease 0s;
+}
+
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    color: #F0810F;
+    background-color: rgba(0, 136,169,0.8);
+}
+
+.Nmode {
+    grid-area: Nmode;
+    display: flex;
+    justify-content: flex-end;
+    margin: auto 0 auto 5%;
+}
+
+.far, .fa-bars{
+    background: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    width: 50px;
+}
+
+.fas{
+    padding-right: 3px;
+    background: none;
+}
+
+.menubtn{
+    display: none;
+    grid-area: menubtn;
+}
+
+@media (max-width: 1000px){
+    .iso{
+        display: block;
+    }
+    .logo{
+        justify-content: center;
+    }
+    .logo img{
+        height: 100px;
+        width: 69px;
+    }
+    .log{
+        display: none;
+    }
+    .header{
+        grid-template-columns: auto 40% 35% auto;
+    }
+}
+@media (max-width: 760px){
+    .links[aria-expanded="true"]{
+        display: grid;
+        max-height: 75px;
+        transform: rotateX(0);
+        grid-template-areas:
+        'hot des pla iti';
+    }
+    .hot{
+        grid-area: hot;
+    }
+    .des{
+        grid-area: des;
+    }
+    .pla{
+        grid-area: pla;
+    }
+    .iti{
+        grid-area: iti;
+    }
+    .header[aria-expanded="true"]{
+        height: 150px;
+        grid-template-rows: 50% 50%;
+    }
+    .links{
+        transform: rotateX(90deg);
+        max-height: 0;
+        transition: all 0.5s;
+    }
+    .menubtn{
+        display: flex;
+        justify-content: flex-start;
+        margin: auto 0 auto 5%;
+    }
+    .Nmode{
+        margin: auto 5% auto 0;
+    }
+    .header{      
+        padding: 0;
+        grid-template-areas: 
+        'menubtn logo Nmode'
+        'link link link';
+        grid-template-columns: 33% 34% 33%;
+        transition: all 0.5s;
+        grid-template-rows: 100% 0;
+    }
+    @media (max-width: 510px){
+        .links[aria-expanded="true"]{
+            display: grid;
+            max-height: 75px;
+            transform: rotateX(0);
+            grid-template-areas:
+            'hot des'
+            'pla iti';
+        }
+        .header[aria-expanded="true"]{
+            height: 225px;
+            grid-template-rows: 33% 66%;
+        }
+
+    }
+}

@@ -1,0 +1,27 @@
+<div class="detail" *ngIf="hotel">
+    
+    <div class="Hotel">
+        <h2 class="tittle">{{hotel.name | uppercase}}</h2>
+        <div class="pic"><img src="{{hotel.picture}}" alt="hotel"></div>
+    </div>
+    <div class="txt">
+        <div>Nombre: {{hotel.name}}</div>
+        <div class="stars">Estrellas:
+            <div *ngFor="let star of stars; let i = index">
+                <span *ngIf="i < hotel.stars">
+                    <i class="fas fa-star"></i>
+                </span>
+                    <span *ngIf="i >= hotel.stars"><i class="far fa-star"></i>
+                </span>
+            </div>
+        </div>
+        <div>Precio: {{hotel.price}}</div>
+        <div>Direccion: {{hotel.direction}}</div>
+        <div>Beneficios: {{hotel.benefits}}</div>
+        <div>Ciudad: {{hotel.city}}</div>
+        <div>Estado: {{hotel.state}}</div>
+        <a routerLink="/main/Hoteles/habitaciones">
+            <div><i class="fas fa-bed"></i> habitaciones</div>
+        </a>
+    </div>
+</div>

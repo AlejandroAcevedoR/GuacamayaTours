@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyCKV3jMIRicvewNup0f4dMk7uiJZK84x2Q ',
+    authDomain: 'guacamaya-tours-7adf9.firebaseapp.com',
+    databaseURL: 'https://guacamaya-tours-7adf9.firebaseio.com',
+    projectId: 'guacamaya-tours-7adf9',
+    storageBucket: 'guacamaya-tours-7adf9.appspot.com',
+  }
 };
 
 /*

@@ -1,6 +1,7 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    "experimentalDecorators": true,
     "outDir": "../out-tsc/e2e",
     "module": "commonjs",
     "target": "es5",
@@ -9,5 +10,6 @@
       "jasminewd2",
       "node"
     ]
-  }
+  },
+  
 }

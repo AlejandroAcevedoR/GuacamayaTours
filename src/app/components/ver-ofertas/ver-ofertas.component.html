@@ -1,0 +1,22 @@
+
+
+<div class = "Ofertas">
+
+       
+<div class = "blanco">
+
+    <ul class="hotels">
+        <li *ngFor="let hotel of hotels">
+            <a class="info" routerLink="/main/Hoteles/detalle/{{hotel.id}}">
+                <div class="name">{{hotel.name | titlecase}}</div>
+                <div class="price"><span>Precio: </span>${{hotel.price}}</div>
+                <div class="pic"><img src="{{hotel.picture}}" alt="hotel"></div>
+                <div class="botonAmarillo">Ver Oferta</div>
+            </a>
+        </li>
+    </ul>
+
+</div>
+
+</div>
+

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300&display=swap');
+
+.footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #FFB300;
+    text-decoration: none;
+    background-color: #00293C;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    'about contact'
+    'bottom bottom';
+    padding: 10px;
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  .contact a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  a:hover{
+    background-color: rgb(0, 41, 78);
+    transition: all 0.5s ease 0s;
+  }
+
+ .about{
+   grid-area: about;
+   height: 100%;
+   width: 100%;
+   display: grid;
+   grid-template-rows: 20% 80%;
+   grid-template-areas: 
+   'tittle1'
+   'txt';
+   padding: 5px;
+ } 
+
+ .fab {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #FFB300;
+}
+
+ .contact{
+   grid-area: contact;
+   height: 100%;
+   width: 100%;
+   display: grid;
+   grid-template-columns: auto auto auto;
+   grid-template-rows: 20% 40% 40%;
+   grid-template-areas: 
+   'tittle tittle tittle'
+   'g ttr f'
+   'w ig tmblr';
+   padding: 5px;
+ }
+
+ .g{
+   grid-area: g;
+ }
+
+ .ttr{
+   grid-area: ttr;
+ }
+
+ .f{
+   grid-area: f;
+ }
+
+ .w{
+   grid-area: w;
+ }
+
+ .ig{
+   grid-area: ig;
+ }
+
+ .tmblr{
+   grid-area: tmblr;
+ }
+
+ .tittle{
+   grid-area: tittle;
+ }
+
+ .tittle1{
+  grid-area: tittle1;
+}
+
+.text{
+  grid-area: txt;
+
+}
+
+ .bottom{
+  grid-area: bottom;
+  padding: 0 0 0px 0;
+  margin-top: 15px;
+  color: #FFB300;
+}
+
+.bottom a{
+  color: #FFB300;
+  text-decoration: none;
+}
+
+.bottom a:hover{
+  background-color: #00293C;
+}
+
+@media (max-width:500px){
+  .footer{
+    grid-template-areas: 
+    'about'
+    'contact'
+    'bottom';
+    grid-template-columns: auto;
+  }
+  .about{
+    grid-template-rows: auto;
+  }
+}

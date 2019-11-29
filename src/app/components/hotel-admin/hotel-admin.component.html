@@ -1,0 +1,23 @@
+<div>
+<ul class="hotels">
+    <li *ngFor="let hotel of hotels">
+        <a class="info" routerLink="/admin/detail/{{hotel.id}}">
+            <div class="name"><span>Nombre: </span> {{hotel.name | titlecase}}</div>
+            <div class="stars"><span>Estrellas: </span>{{hotel.stars}}</div>
+            <div class="price"><span>Precio: </span>${{hotel.price}}</div>
+            <div class="pic"><img src="{{hotel.picture}}" alt="hotel"></div>
+        </a>
+            <button class="delete" (click)="delete(hero)">X</button>
+    </li>
+</ul>
+<div class="add">
+  <div class="divInput">
+    <label>Hotel:
+      <input #hotelName />
+    </label>
+  </div>
+    <button class="bAdd" (click)="add(hotelName.value); hotelName.value=''">
+      agregar
+    </button>
+</div>
+</div>

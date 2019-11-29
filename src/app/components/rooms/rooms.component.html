@@ -1,0 +1,20 @@
+<div class="hotel"><h2>EUROBUILDING</h2></div>
+<ul>
+    <li class="rms" *ngFor="let room of rooms">
+        <div class="name">{{room.name}}</div>
+        <div class="view">vista {{room.view}}</div>
+        <div class="cap">capacidad: {{room.capacity}}</div>
+        <div class="comodities">comodidades: {{room.comodities[2]}}, {{room.comodities[3]}},</div>
+        <div class="comodities2">{{room.comodities[0]}}, {{room.comodities[1]}}</div>
+        <div class="slider">
+            <ul>
+                <li><img src="{{room.pictures[0]}}" alt=""></li>
+                <li><img src="{{room.pictures[1]}}" alt=""></li>
+                <li><img src="{{room.pictures[2]}}" alt=""></li>
+                <li><img src="{{room.pictures[3]}}" alt=""></li>
+                <li><img src="{{room.pictures[4]}}" alt=""></li>
+            </ul>
+        </div>
+        <div class="reservar"><a href="https://www.paypal.com/ve/home"><button>Reservar</button></a></div>
+    </li>
+</ul>

@@ -1,0 +1,75 @@
+<div>
+    
+        <div class="search">    
+                <i class="fas fa-search"></i>    
+                <div class="md-form mt-0 frm1">
+                    <input [(ngModel)]="listFilter" class="form-control" type="text" placeholder="Hotel" aria-label="Search">
+                </div>
+                <div class="md-form mt-0 frm2">
+                    <input [(ngModel)]="priceFilter" class="form-control" type="text" placeholder="Precio" aria-label="Search">
+                </div>
+                <div class="dropdown dstars">
+                    <input [(ngModel)]="starFilter" id="sf">
+                    <button class="dropbtn"><i class="fas fa-star-half-alt"></i></button>
+                    <div class="dropdown-content">
+                        <a (click)="sstars(6)">Todos</a>
+                        <a (click)="sstars(0)"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></a>
+                        <a (click)="sstars(1)"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></a>
+                        <a (click)="sstars(2)"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></a>
+                        <a (click)="sstars(3)"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></a>
+                        <a (click)="sstars(4)"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></a>
+                        <a (click)="sstars(5)"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></a>
+                    </div>
+                </div>
+                <div class="dropdown dstate">
+                    <input [(ngModel)]="stateFilter" id="sf">
+                    <button class="dropbtn"><i class="fas fa-map-marked-alt"></i></button>
+                    <div class="dropdown-content">
+                        <a (click)="sstate('')">Todos</a>
+                        <a (click)="sstate('amazonas')">Amazonas</a>
+                        <a (click)="sstate('anzoátegui')">Anzoátegui</a>
+                        <a (click)="sstate('apure')">Apure</a>
+                        <a (click)="sstate('aragua')">Aragua</a>
+                        <a (click)="sstate('barinas')">Barinas</a>
+                        <a (click)="sstate('bolivar')">Bolivar</a>
+                        <a (click)="sstate('carabobo')">Carabobo</a>
+                        <a (click)="sstate('cojedes')">Cojedes</a>
+                        <a (click)="sstate('delta amacuro')">Delta Amacuro</a>
+                        <a (click)="sstate('distrito capital')">Distrito Capital</a>
+                        <a (click)="sstate('falcón')">Falcón</a>
+                        <a (click)="sstate('guárico')">Guárico</a>
+                        <a (click)="sstate('lara')">Lara</a>
+                        <a (click)="sstate('mérida')">Mérida</a>
+                        <a (click)="sstate('miranda')">Miranda</a>
+                        <a (click)="sstate('monagas')">Monagas</a>
+                        <a (click)="sstate('nueva esparta')">Nueva Esparta</a>
+                        <a (click)="sstate('portuguesa')">Portuguesa</a>
+                        <a (click)="sstate('sucre')">Sucre</a>
+                        <a (click)="sstate('táchira')">Táchira</a>
+                        <a (click)="sstate('trujillo')">Trujillo</a>
+                        <a (click)="sstate('vargas')">Vargas</a>
+                        <a (click)="sstate('yaracuy')">Yaracuy</a>
+                        <a (click)="sstate('zulia')">Zulia</a>
+                    </div>
+                </div>
+        </div>
+<ul class="hotels">
+    
+    <li *ngFor="let hotel of hotels | filter:listFilter:starFilter:priceFilter:stateFilter">
+        <a class="info" routerLink="/main/Hoteles/detalle/{{hotel.id}}">
+            <div class="name">{{hotel.name | titlecase}}</div>
+            <div class="stars">
+                <div *ngFor="let star of stars; let i = index">
+                    <span *ngIf="i < hotel.stars">
+                        <i class="fas fa-star"></i>
+                    </span>
+                        <span *ngIf="i >= hotel.stars"><i class="far fa-star"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="price"><span>A partir de: </span>${{hotel.price}}</div>
+            <div class="pic"><img src="{{hotel.picture}}" alt="hotel"></div>
+        </a>
+    </li>
+</ul>
+</div>

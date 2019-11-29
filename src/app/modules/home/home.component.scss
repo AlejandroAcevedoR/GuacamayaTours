@@ -1,0 +1,32 @@
+.home{
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-areas:
+    'slider slider of'
+    'slider slider of'
+    'list list list';
+    row-gap: 10px;
+    margin: 0;
+}
+
+app-slider{
+    grid-area: slider;
+}
+
+app-hotel-temp{
+    grid-area: list;
+}
+
+app-ver-ofertas{
+    grid-area: of;
+}
+
+@media(max-width:1000px){
+    .home{
+        grid-template-columns: 100%;
+        grid-template-areas:
+        'slider'
+        'of'
+        'list'; 
+    }
+}

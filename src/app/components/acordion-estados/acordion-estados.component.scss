@@ -1,0 +1,42 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-gap: 10px;
+    padding: 30px;
+}
+
+::ng-deep .card {
+    background-color: #00293C;
+    color: #FFB300;
+    border-color: #FFB300;
+    border-width: 2px;
+}
+
+a{
+    text-decoration: none;
+    color: #FFB300;
+}
+
+::ng-deep .card-header:hover{
+    background-color: rgb(0, 136, 139);
+}
+
+::ng-deep .btn-link{
+    color: #FFB300;
+    font-weight: normal;
+    text-decoration: none!important;
+ }
+
+::ng-deep .btn-link:hover{
+    color: #FFB300;
+    font-weight: bold;
+    text-decoration: none!important;
+ }
+
+#item1 {
+    grid-column: 1;
+}
+
+#item3 {
+    grid-column: 3;
+}
