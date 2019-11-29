@@ -16,7 +16,11 @@ const routes: Routes = [
     { path: 'PlaneaTuViaje', loadChildren: () => import('../../modules/ptv/ptv.module')
     .then(m => m.PTVModule) },
     { path: 'Itinerario', loadChildren: () => import('../../modules/itinerario/itinerario.module')
-    .then(m => m.ItinerarioModule) }
+    .then(m => m.ItinerarioModule) },
+    { path: 'Miranda', loadChildren: () => import('../../modules/miranda/miranda.module')
+    .then(m => m.MirandaModule) },
+    { path: 'Lara', loadChildren: () => import('../../modules/lara/lara.module')
+    .then(m => m.LaraModule) }
 ]
 }
 ];

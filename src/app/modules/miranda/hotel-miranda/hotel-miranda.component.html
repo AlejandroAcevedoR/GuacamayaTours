@@ -1,0 +1,43 @@
+<div>
+    
+        <div class="search">
+          
+                <i class="fas fa-search"></i>
+                 
+                <div class="md-form mt-0">
+                    
+                    <input [(ngModel)]="listFilter" class="form-control" type="text" placeholder="Si le interesa ver los hoteles de este estado, escriba Distrito Capital en este buscador" aria-label="Search">
+                </div>
+                
+                <!-- <div class="dropdown">
+                    <button class="dropbtn"><i class="fas fa-star-half-alt"></i></button>
+                    <div class="dropdown-content">
+                        <a (click)="sstars(0)"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></a>
+                        <a (click)="sstars(1)"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></a>
+                        <a (click)="sstars(2)"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></a>
+                        <a (click)="sstars(3)"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></a>
+                        <a (click)="sstars(4)"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></a>
+                        <a (click)="sstars(5)"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></a>
+                    </div>
+                </div>  -->
+        </div>
+<ul class="hotels">
+    
+    <li *ngFor="let hotel of filteredHotels">
+        <a class="info" routerLink="/main/Hoteles/detalle/{{hotel.id}}">
+            <div class="name">{{hotel.name | titlecase}}</div>
+            <div class="stars">
+                <div *ngFor="let star of stars; let i = index">
+                    <span *ngIf="i < hotel.stars">
+                        <i class="fas fa-star"></i>
+                    </span>
+                        <span *ngIf="i >= hotel.stars"><i class="far fa-star"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="price"><span>A partir de: </span>${{hotel.price}}</div>
+            <div class="pic"><img src="{{hotel.picture}}" alt="hotel"></div>
+        </a>
+    </li>
+</ul>
+</div>
